@@ -1,0 +1,72 @@
+[
+  {
+    "id": "duke",
+    "name": "DUKE",
+    "sections": [
+      { "from": "Sri Rampai", "to": "Sentul Pasar", "feeRM": 2.50, "distanceKm": 8.5 }
+    ]
+  },
+  {
+    "id": "ldp",
+    "name": "LDP",
+    "sections": [
+      { "from": "Sunway", "to": "Puchong", "feeRM": 2.20, "distanceKm": 12.0 }
+    ]
+  },
+  {
+    "id": "smart",
+    "name": "SMART Tunnel",
+    "sections": [
+      { "from": "Kg Pandan", "to": "Jalan Tun Razak", "feeRM": 3.00, "distanceKm": 4.0 }
+    ]
+  },
+  {
+    "id": "sprint",
+    "name": "SPRINT",
+    "sections": [
+      { "from": "Kerinchi", "to": "Penchala", "feeRM": 1.60, "distanceKm": 6.5 }
+    ]
+  },
+  {
+    "id": "mex",
+    "name": "MEX",
+    "sections": [
+      { "from": "Seri Kembangan", "to": "Putrajaya", "feeRM": 3.80, "distanceKm": 20.0 }
+    ]
+  },
+  {
+    "id": "npe",
+    "name": "NPE",
+    "sections": [
+      { "from": "Pantai Dalam", "to": "Bangsar", "feeRM": 1.80, "distanceKm": 5.0 }
+    ]
+  },
+  {
+    "id": "kesas",
+    "name": "KESAS",
+    "sections": [
+      { "from": "Bukit Jalil", "to": "Puchong", "feeRM": 2.50, "distanceKm": 11.0 }
+    ]
+  },
+  {
+    "id": "akleh",
+    "name": "AKLEH",
+    "sections": [
+      { "from": "Kg Baru", "to": "Ampang", "feeRM": 2.00, "distanceKm": 7.0 }
+    ]
+  },
+  {
+    "id": "gce",
+    "name": "GCE",
+    "sections": [
+      { "from": "Hicom", "to": "Batu Caves", "feeRM": 1.50, "distanceKm": 6.0 }
+    ]
+  },
+  {
+    "id": "lksa",
+    "name": "LKSA",
+    "sections": [
+      { "from": "Jalan Istana", "to": "Cheras", "feeRM": 2.00, "distanceKm": 9.0 }
+    ]
+  }
+]

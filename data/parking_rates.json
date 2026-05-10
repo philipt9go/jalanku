@@ -1,0 +1,10 @@
+[
+  { "id": "kepong-sentral-lrt", "name": "Kepong Sentral LRT", "line": "LRT Sri Petaling Line", "dailyFeeRM": 2.00, "estimatedSpaces": 300, "provider": "Rapid KL" },
+  { "id": "ioi-puchong-lrt", "name": "IOI Puchong Jaya LRT", "line": "LRT Sri Petaling Line", "dailyFeeRM": 2.00, "estimatedSpaces": 400, "provider": "Rapid KL" },
+  { "id": "taman-midah-mrt", "name": "Taman Midah MRT", "line": "MRT Kajang Line", "dailyFeeRM": 4.00, "estimatedSpaces": 400, "provider": "Rapid KL" },
+  { "id": "kajang-mrt", "name": "Kajang MRT", "line": "MRT Kajang Line", "dailyFeeRM": 4.00, "estimatedSpaces": 800, "provider": "Rapid KL" },
+  { "id": "putrajaya-sentral-mrt", "name": "Putrajaya Sentral MRT", "line": "MRT Putrajaya Line", "dailyFeeRM": 4.30, "estimatedSpaces": 800, "provider": "Rapid KL" },
+  { "id": "gombak-lrt", "name": "Gombak LRT", "line": "LRT Kelana Jaya Line", "dailyFeeRM": 4.00, "estimatedSpaces": 300, "provider": "Rapid KL" },
+  { "id": "kelana-jaya-lrt", "name": "Kelana Jaya LRT", "line": "LRT Kelana Jaya Line", "dailyFeeRM": 5.00, "estimatedSpaces": 200, "provider": "Rapid KL" },
+  { "id": "sri-damansara-timur-mrt", "name": "Sri Damansara Timur MRT", "line": "MRT Putrajaya Line", "dailyFeeRM": 4.00, "estimatedSpaces": 500, "provider": "Rapid KL" }
+]
