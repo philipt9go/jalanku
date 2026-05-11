@@ -2,12 +2,6 @@ import type { CachedRoute, ComparisonResult, TransitCost, CommuteRoute, CarInput
 import type { TollHighway, ParkAndRideStation } from "./types"
 import { buildComparison } from "./car-cost"
 
-// ─────────────────────────────────────────────────────────────
-// Load static data files
-// These are read at build time / server startup (Node fs, not client)
-// ─────────────────────────────────────────────────────────────
-
-// In Next.js App Router, import JSON directly (server components only)
 import transitCacheData from "../data/transit_cache.json"
 import tollRatesData from "../data/toll_rates.json"
 import parkingRatesData from "../data/parking_rates.json"
@@ -16,10 +10,6 @@ const transitCache = transitCacheData as CachedRoute[]
 const tollHighways = tollRatesData as TollHighway[]
 const parkingStations = parkingRatesData as ParkAndRideStation[]
 
-// ─────────────────────────────────────────────────────────────
-// Route lookup
-// ─────────────────────────────────────────────────────────────
-
 export function getRoute(routeId: string): CachedRoute | null {
   return transitCache.find((r) => r.id === routeId) ?? null
 }
@@ -27,10 +17,6 @@ export function getRoute(routeId: string): CachedRoute | null {
 export function getAllRoutes(): CachedRoute[] {
   return transitCache
 }
-
-// ─────────────────────────────────────────────────────────────
-// Build ComparisonResult from a routeId + optional custom car inputs
-// ─────────────────────────────────────────────────────────────
 
 export function lookupComparison(
   routeId: string,
@@ -43,20 +29,19 @@ export function lookupComparison(
     ? parkingStations.find((s) => s.id === cached.recommendedParking)
     : null
 
+  const fareMonthly = cached.fareRM * 2 * 22
+  const parkAndRideMonthly = parkAndRideStation ? parkAndRideStation.dailyFeeRM * 22 : 0
+
   const transit: TransitCost = {
-    fareRM: cached.fareRM * 2 * 22, // one-way × 2 × 22 working days
-    parkAndRideRM: parkAndRideStation ? parkAndRideStation.dailyFeeRM * 22 : 0,
-    totalMonthly: 0, // recalculated below
+    fareRM: Math.round(fareMonthly * 100) / 100,
+    parkAndRideRM: parkAndRideMonthly,
+    totalMonthly: Math.round((fareMonthly + parkAndRideMonthly) * 100) / 100,
     transitTimeMinutes: cached.transitTimeMinutes,
     driveTimeMinutes: cached.driveTimeMinutes,
     driveTimePeakMinutes: cached.driveTimePeakMinutes,
     routeDescription: cached.routeDescription,
     lines: cached.lines,
   }
-
-  // Recalculate transit total
-  transit.totalMonthly =
-    Math.round((transit.fareRM + transit.parkAndRideRM) * 100) / 100
 
   const route: CommuteRoute = {
     id: cached.id,
@@ -66,33 +51,27 @@ export function lookupComparison(
     workingDaysPerMonth: 22,
   }
 
-  // Derive toll from the highways on this driving route
   const routeTollPerTrip = cached.tollHighways.reduce((sum, hwId) => {
     const hw = tollHighways.find((h) => h.id === hwId)
-    if (!hw) return sum
-    // Sum all sections of this highway (simplified: use first section fee)
-    return sum + (hw.sections[0]?.feeRM ?? 0)
+    return sum + (hw?.sections[0]?.feeRM ?? 0)
   }, 0)
 
-  return buildComparison(route, transit, {
-    tollPerTrip: routeTollPerTrip,
-    ...customCarInputs,
-  })
+  return buildComparison(
+    route,
+    transit,
+    routeTollPerTrip,
+    cached.noTollExtraMinutes ?? 0,
+    cached.noTollExtraKm ?? 0,
+    customCarInputs
+  )
 }
-
-// ─────────────────────────────────────────────────────────────
-// Helpers for the route selector dropdown
-// ─────────────────────────────────────────────────────────────
 
 export function getUniqueOrigins(): string[] {
   return [...new Set(transitCache.map((r) => r.origin))].sort()
 }
 
 export function getDestinationsForOrigin(origin: string): string[] {
-  return transitCache
-    .filter((r) => r.origin === origin)
-    .map((r) => r.destination)
-    .sort()
+  return transitCache.filter((r) => r.origin === origin).map((r) => r.destination).sort()
 }
 
 export function findRouteId(origin: string, destination: string): string | null {
@@ -100,10 +79,6 @@ export function findRouteId(origin: string, destination: string): string | null 
     (r) => r.origin === origin && r.destination === destination
   )?.id ?? null
 }
-
-// ─────────────────────────────────────────────────────────────
-// Sample routes for the landing page (top 6 by savings)
-// ─────────────────────────────────────────────────────────────
 
 export function getSampleResults(limit = 6): ComparisonResult[] {
   return transitCache

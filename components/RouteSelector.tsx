@@ -4,33 +4,62 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 
 const ORIGINS = [
-  "Kepong", "Puchong", "Subang Jaya", "Cheras",
-  "Shah Alam", "Ampang", "Kajang", "Putrajaya", "Gombak",
+  "Ampang", "Cheras", "Gombak", "Kajang", "Kepong",
+  "Kuchai Lama", "Puchong", "Putrajaya", "Shah Alam", "Subang Jaya",
 ]
 
 const DESTINATIONS_BY_ORIGIN: Record<string, string[]> = {
-  "Kepong": ["KLCC"],
-  "Puchong": ["KLCC", "Bangsar"],
-  "Subang Jaya": ["KLCC"],
-  "Cheras": ["KLCC"],
-  "Shah Alam": ["KLCC"],
-  "Ampang": ["KLCC"],
-  "Kajang": ["KLCC"],
-  "Putrajaya": ["KLCC"],
-  "Gombak": ["KLCC"],
+  "Ampang":      ["Bukit Bintang", "KLCC", "Midvalley"],
+  "Cheras":      ["Bukit Bintang", "KLCC", "Midvalley"],
+  "Gombak":      ["Bukit Bintang", "KLCC", "Midvalley"],
+  "Kajang":      ["Bukit Bintang", "KLCC", "Midvalley"],
+  "Kepong":      ["Bukit Bintang", "KLCC", "Midvalley", "Petaling Jaya"],
+  "Kuchai Lama": ["Bangsar", "Bukit Bintang", "KL Sentral", "KLCC", "Midvalley", "Petaling Jaya"],
+  "Puchong":     ["Bangsar", "Bukit Bintang", "KL Sentral", "KLCC", "Midvalley", "Petaling Jaya"],
+  "Putrajaya":   ["Bangsar", "Cyberjaya", "KLCC"],
+  "Shah Alam":   ["KL Sentral", "KLCC", "Petaling Jaya"],
+  "Subang Jaya": ["Bangsar", "KLCC", "Midvalley", "Petaling Jaya"],
 }
 
 const ROUTE_IDS: Record<string, string> = {
-  "Kepong|KLCC": "kepong-klcc",
-  "Puchong|KLCC": "puchong-klcc",
-  "Puchong|Bangsar": "puchong-bangsar",
-  "Subang Jaya|KLCC": "subang-jaya-klcc",
-  "Cheras|KLCC": "cheras-klcc",
-  "Shah Alam|KLCC": "shah-alam-klcc",
-  "Ampang|KLCC": "ampang-klcc",
-  "Kajang|KLCC": "kajang-klcc",
-  "Putrajaya|KLCC": "putrajaya-klcc",
-  "Gombak|KLCC": "gombak-klcc",
+  "Ampang|Bukit Bintang":        "ampang-bukit-bintang",
+  "Ampang|KLCC":                 "ampang-klcc",
+  "Ampang|Midvalley":            "ampang-midvalley",
+  "Cheras|Bukit Bintang":        "cheras-bukit-bintang",
+  "Cheras|KLCC":                 "cheras-klcc",
+  "Cheras|Midvalley":            "cheras-midvalley",
+  "Gombak|Bukit Bintang":        "gombak-bukit-bintang",
+  "Gombak|KLCC":                 "gombak-klcc",
+  "Gombak|Midvalley":            "gombak-midvalley",
+  "Kajang|Bukit Bintang":        "kajang-bukit-bintang",
+  "Kajang|KLCC":                 "kajang-klcc",
+  "Kajang|Midvalley":            "kajang-midvalley",
+  "Kepong|Bukit Bintang":        "kepong-bukit-bintang",
+  "Kepong|KLCC":                 "kepong-klcc",
+  "Kepong|Midvalley":            "kepong-midvalley",
+  "Kepong|Petaling Jaya":        "kepong-pj",
+  "Kuchai Lama|Bangsar":         "kuchai-lama-bangsar",
+  "Kuchai Lama|Bukit Bintang":   "kuchai-lama-bukit-bintang",
+  "Kuchai Lama|KL Sentral":      "kuchai-lama-kl-sentral",
+  "Kuchai Lama|KLCC":            "kuchai-lama-klcc",
+  "Kuchai Lama|Midvalley":       "kuchai-lama-midvalley",
+  "Kuchai Lama|Petaling Jaya":   "kuchai-lama-pj",
+  "Puchong|Bangsar":             "puchong-bangsar",
+  "Puchong|Bukit Bintang":       "puchong-bukit-bintang",
+  "Puchong|KL Sentral":          "puchong-kl-sentral",
+  "Puchong|KLCC":                "puchong-klcc",
+  "Puchong|Midvalley":           "puchong-midvalley",
+  "Puchong|Petaling Jaya":       "puchong-pj",
+  "Putrajaya|Bangsar":           "putrajaya-bangsar",
+  "Putrajaya|Cyberjaya":         "putrajaya-cyberjaya",
+  "Putrajaya|KLCC":              "putrajaya-klcc",
+  "Shah Alam|KL Sentral":        "shah-alam-kl-sentral",
+  "Shah Alam|KLCC":              "shah-alam-klcc",
+  "Shah Alam|Petaling Jaya":     "shah-alam-pj",
+  "Subang Jaya|Bangsar":         "subang-jaya-bangsar",
+  "Subang Jaya|KLCC":            "subang-jaya-klcc",
+  "Subang Jaya|Midvalley":       "subang-jaya-midvalley",
+  "Subang Jaya|Petaling Jaya":   "subang-jaya-pj",
 }
 
 export default function RouteSelector() {
@@ -43,8 +72,10 @@ export default function RouteSelector() {
   const routeId = origin && destination ? ROUTE_IDS[`${origin}|${destination}`] : null
 
   function handleSwap() {
-    setOrigin(destination)
-    setDestination(origin)
+    if (destination && ORIGINS.includes(destination)) {
+      setOrigin(destination)
+      setDestination("")
+    }
   }
 
   function handleCalculate() {
@@ -98,6 +129,12 @@ export default function RouteSelector() {
       >
         {loading ? "Mengira..." : "💸 Tengok berapa aku habis sebulan →"}
       </button>
+
+      {origin && destinations.length > 0 && (
+        <p className="text-center text-xs text-gray-400 mt-2">
+          {destinations.length} destinasi tersedia dari {origin}
+        </p>
+      )}
     </div>
   )
 }

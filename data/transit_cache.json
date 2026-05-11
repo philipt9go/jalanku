@@ -7,172 +7,1158 @@
     "driveTimeMinutes": 25,
     "driveTimePeakMinutes": 55,
     "transitTimeMinutes": 42,
-    "fareRM": 2.60,
+    "fareRM": 2.6,
     "routeDescription": "LRT Sri Petaling Line → Masjid Jamek → LRT Kelana Jaya Line (1 transfer)",
     "lines": [
-      { "name": "LRT Sri Petaling Line", "colour": "#8B1A1A", "fromStation": "Kepong Sentral", "toStation": "Masjid Jamek" },
-      { "name": "LRT Kelana Jaya Line", "colour": "#0057A8", "fromStation": "Masjid Jamek", "toStation": "KLCC" }
+      {
+        "name": "LRT Sri Petaling Line",
+        "colour": "#8B1A1A",
+        "fromStation": "Kepong Sentral",
+        "toStation": "Masjid Jamek"
+      },
+      {
+        "name": "LRT Kelana Jaya Line",
+        "colour": "#0057A8",
+        "fromStation": "Masjid Jamek",
+        "toStation": "KLCC"
+      }
     ],
-    "tollHighways": ["sprint"],
+    "tollHighways": [
+      "sprint"
+    ],
     "recommendedParking": "kepong-sentral-lrt",
-    "cachedAt": "2026-05-09T00:00:00Z"
+    "cachedAt": "2026-05-09T00:00:00Z",
+    "noTollExtraMinutes": 9,
+    "noTollExtraKm": 2.2
   },
   {
     "id": "puchong-klcc",
     "origin": "Puchong",
     "destination": "KLCC",
-    "distanceKm": 22.0,
+    "distanceKm": 22,
     "driveTimeMinutes": 35,
     "driveTimePeakMinutes": 75,
     "transitTimeMinutes": 58,
-    "fareRM": 3.20,
+    "fareRM": 3.2,
     "routeDescription": "LRT Sri Petaling Line → Masjid Jamek → LRT Kelana Jaya Line (1 transfer)",
     "lines": [
-      { "name": "LRT Sri Petaling Line", "colour": "#8B1A1A", "fromStation": "IOI Puchong Jaya", "toStation": "Masjid Jamek" },
-      { "name": "LRT Kelana Jaya Line", "colour": "#0057A8", "fromStation": "Masjid Jamek", "toStation": "KLCC" }
+      {
+        "name": "LRT Sri Petaling Line",
+        "colour": "#8B1A1A",
+        "fromStation": "IOI Puchong Jaya",
+        "toStation": "Masjid Jamek"
+      },
+      {
+        "name": "LRT Kelana Jaya Line",
+        "colour": "#0057A8",
+        "fromStation": "Masjid Jamek",
+        "toStation": "KLCC"
+      }
     ],
-    "tollHighways": ["ldp", "sprint"],
+    "tollHighways": [
+      "ldp",
+      "sprint"
+    ],
     "recommendedParking": "ioi-puchong-lrt",
-    "cachedAt": "2026-05-09T00:00:00Z"
+    "cachedAt": "2026-05-09T00:00:00Z",
+    "noTollExtraMinutes": 12,
+    "noTollExtraKm": 3.3
   },
   {
     "id": "subang-jaya-klcc",
     "origin": "Subang Jaya",
     "destination": "KLCC",
-    "distanceKm": 24.0,
+    "distanceKm": 24,
     "driveTimeMinutes": 30,
     "driveTimePeakMinutes": 65,
     "transitTimeMinutes": 55,
-    "fareRM": 3.50,
+    "fareRM": 3.5,
     "routeDescription": "KTM Komuter → KL Sentral → LRT Kelana Jaya Line (1 transfer)",
     "lines": [
-      { "name": "KTM Komuter", "colour": "#003087", "fromStation": "Subang Jaya", "toStation": "KL Sentral" },
-      { "name": "LRT Kelana Jaya Line", "colour": "#0057A8", "fromStation": "KL Sentral", "toStation": "KLCC" }
+      {
+        "name": "KTM Komuter",
+        "colour": "#003087",
+        "fromStation": "Subang Jaya",
+        "toStation": "KL Sentral"
+      },
+      {
+        "name": "LRT Kelana Jaya Line",
+        "colour": "#0057A8",
+        "fromStation": "KL Sentral",
+        "toStation": "KLCC"
+      }
     ],
-    "tollHighways": ["npe", "sprint"],
+    "tollHighways": [
+      "npe",
+      "sprint"
+    ],
     "recommendedParking": null,
-    "cachedAt": "2026-05-09T00:00:00Z"
+    "cachedAt": "2026-05-09T00:00:00Z",
+    "noTollExtraMinutes": 11,
+    "noTollExtraKm": 3.6
   },
   {
     "id": "cheras-klcc",
     "origin": "Cheras",
     "destination": "KLCC",
-    "distanceKm": 12.0,
+    "distanceKm": 12,
     "driveTimeMinutes": 20,
     "driveTimePeakMinutes": 50,
     "transitTimeMinutes": 35,
-    "fareRM": 2.10,
+    "fareRM": 2.1,
     "routeDescription": "MRT Kajang Line direct (no transfer)",
     "lines": [
-      { "name": "MRT Kajang Line", "colour": "#1D9E75", "fromStation": "Taman Midah", "toStation": "KLCC" }
+      {
+        "name": "MRT Kajang Line",
+        "colour": "#1D9E75",
+        "fromStation": "Taman Midah",
+        "toStation": "KLCC"
+      }
     ],
-    "tollHighways": ["smart"],
+    "tollHighways": [
+      "smart"
+    ],
     "recommendedParking": "taman-midah-mrt",
-    "cachedAt": "2026-05-09T00:00:00Z"
+    "cachedAt": "2026-05-09T00:00:00Z",
+    "noTollExtraMinutes": 7,
+    "noTollExtraKm": 1.8
   },
   {
     "id": "shah-alam-klcc",
     "origin": "Shah Alam",
     "destination": "KLCC",
-    "distanceKm": 30.0,
+    "distanceKm": 30,
     "driveTimeMinutes": 40,
     "driveTimePeakMinutes": 80,
     "transitTimeMinutes": 65,
-    "fareRM": 4.00,
+    "fareRM": 4,
     "routeDescription": "KTM Komuter → KL Sentral → LRT Kelana Jaya Line (1 transfer)",
     "lines": [
-      { "name": "KTM Komuter", "colour": "#003087", "fromStation": "Shah Alam", "toStation": "KL Sentral" },
-      { "name": "LRT Kelana Jaya Line", "colour": "#0057A8", "fromStation": "KL Sentral", "toStation": "KLCC" }
+      {
+        "name": "KTM Komuter",
+        "colour": "#003087",
+        "fromStation": "Shah Alam",
+        "toStation": "KL Sentral"
+      },
+      {
+        "name": "LRT Kelana Jaya Line",
+        "colour": "#0057A8",
+        "fromStation": "KL Sentral",
+        "toStation": "KLCC"
+      }
     ],
-    "tollHighways": ["kesas", "npe"],
+    "tollHighways": [
+      "kesas",
+      "npe"
+    ],
     "recommendedParking": null,
-    "cachedAt": "2026-05-09T00:00:00Z"
+    "cachedAt": "2026-05-09T00:00:00Z",
+    "noTollExtraMinutes": 14,
+    "noTollExtraKm": 4.5
   },
   {
     "id": "ampang-klcc",
     "origin": "Ampang",
     "destination": "KLCC",
-    "distanceKm": 10.0,
+    "distanceKm": 10,
     "driveTimeMinutes": 20,
     "driveTimePeakMinutes": 45,
     "transitTimeMinutes": 30,
-    "fareRM": 1.80,
+    "fareRM": 1.8,
     "routeDescription": "LRT Ampang Line → Masjid Jamek → LRT Kelana Jaya Line (1 transfer)",
     "lines": [
-      { "name": "LRT Ampang Line", "colour": "#F7941D", "fromStation": "Ampang", "toStation": "Masjid Jamek" },
-      { "name": "LRT Kelana Jaya Line", "colour": "#0057A8", "fromStation": "Masjid Jamek", "toStation": "KLCC" }
+      {
+        "name": "LRT Ampang Line",
+        "colour": "#F7941D",
+        "fromStation": "Ampang",
+        "toStation": "Masjid Jamek"
+      },
+      {
+        "name": "LRT Kelana Jaya Line",
+        "colour": "#0057A8",
+        "fromStation": "Masjid Jamek",
+        "toStation": "KLCC"
+      }
     ],
-    "tollHighways": ["akleh"],
+    "tollHighways": [
+      "akleh"
+    ],
     "recommendedParking": null,
-    "cachedAt": "2026-05-09T00:00:00Z"
+    "cachedAt": "2026-05-09T00:00:00Z",
+    "noTollExtraMinutes": 7,
+    "noTollExtraKm": 1.5
   },
   {
     "id": "kajang-klcc",
     "origin": "Kajang",
     "destination": "KLCC",
-    "distanceKm": 28.0,
+    "distanceKm": 28,
     "driveTimeMinutes": 38,
     "driveTimePeakMinutes": 75,
     "transitTimeMinutes": 52,
-    "fareRM": 4.20,
+    "fareRM": 4.2,
     "routeDescription": "MRT Kajang Line direct (no transfer)",
     "lines": [
-      { "name": "MRT Kajang Line", "colour": "#1D9E75", "fromStation": "Kajang", "toStation": "KLCC" }
+      {
+        "name": "MRT Kajang Line",
+        "colour": "#1D9E75",
+        "fromStation": "Kajang",
+        "toStation": "KLCC"
+      }
     ],
-    "tollHighways": ["mex"],
+    "tollHighways": [
+      "mex"
+    ],
     "recommendedParking": "kajang-mrt",
-    "cachedAt": "2026-05-09T00:00:00Z"
+    "cachedAt": "2026-05-09T00:00:00Z",
+    "noTollExtraMinutes": 13,
+    "noTollExtraKm": 4.2
   },
   {
     "id": "putrajaya-klcc",
     "origin": "Putrajaya",
     "destination": "KLCC",
-    "distanceKm": 38.0,
+    "distanceKm": 38,
     "driveTimeMinutes": 45,
     "driveTimePeakMinutes": 90,
     "transitTimeMinutes": 70,
-    "fareRM": 5.50,
+    "fareRM": 5.5,
     "routeDescription": "MRT Putrajaya Line → Muzium Negara → LRT Kelana Jaya Line (1 transfer)",
     "lines": [
-      { "name": "MRT Putrajaya Line", "colour": "#8B4513", "fromStation": "Putrajaya Sentral", "toStation": "Muzium Negara" },
-      { "name": "LRT Kelana Jaya Line", "colour": "#0057A8", "fromStation": "Muzium Negara", "toStation": "KLCC" }
+      {
+        "name": "MRT Putrajaya Line",
+        "colour": "#8B4513",
+        "fromStation": "Putrajaya Sentral",
+        "toStation": "Muzium Negara"
+      },
+      {
+        "name": "LRT Kelana Jaya Line",
+        "colour": "#0057A8",
+        "fromStation": "Muzium Negara",
+        "toStation": "KLCC"
+      }
     ],
-    "tollHighways": ["mex", "smart"],
+    "tollHighways": [
+      "mex",
+      "smart"
+    ],
     "recommendedParking": "putrajaya-sentral-mrt",
-    "cachedAt": "2026-05-09T00:00:00Z"
+    "cachedAt": "2026-05-09T00:00:00Z",
+    "noTollExtraMinutes": 16,
+    "noTollExtraKm": 5.7
   },
   {
     "id": "gombak-klcc",
     "origin": "Gombak",
     "destination": "KLCC",
-    "distanceKm": 16.0,
+    "distanceKm": 16,
     "driveTimeMinutes": 25,
     "driveTimePeakMinutes": 55,
     "transitTimeMinutes": 38,
-    "fareRM": 2.40,
+    "fareRM": 2.4,
     "routeDescription": "LRT Kelana Jaya Line direct (no transfer)",
     "lines": [
-      { "name": "LRT Kelana Jaya Line", "colour": "#0057A8", "fromStation": "Gombak", "toStation": "KLCC" }
+      {
+        "name": "LRT Kelana Jaya Line",
+        "colour": "#0057A8",
+        "fromStation": "Gombak",
+        "toStation": "KLCC"
+      }
     ],
-    "tollHighways": ["duke"],
+    "tollHighways": [
+      "duke"
+    ],
     "recommendedParking": "gombak-lrt",
-    "cachedAt": "2026-05-09T00:00:00Z"
+    "cachedAt": "2026-05-09T00:00:00Z",
+    "noTollExtraMinutes": 9,
+    "noTollExtraKm": 2.4
   },
   {
     "id": "puchong-bangsar",
     "origin": "Puchong",
     "destination": "Bangsar",
-    "distanceKm": 18.0,
+    "distanceKm": 18,
     "driveTimeMinutes": 28,
     "driveTimePeakMinutes": 60,
     "transitTimeMinutes": 50,
-    "fareRM": 2.80,
+    "fareRM": 2.8,
     "routeDescription": "LRT Sri Petaling Line → Bangsar (no transfer)",
     "lines": [
-      { "name": "LRT Sri Petaling Line", "colour": "#8B1A1A", "fromStation": "IOI Puchong Jaya", "toStation": "Bangsar" }
+      {
+        "name": "LRT Sri Petaling Line",
+        "colour": "#8B1A1A",
+        "fromStation": "IOI Puchong Jaya",
+        "toStation": "Bangsar"
+      }
     ],
-    "tollHighways": ["ldp", "npe"],
+    "tollHighways": [
+      "ldp",
+      "npe"
+    ],
     "recommendedParking": "ioi-puchong-lrt",
-    "cachedAt": "2026-05-09T00:00:00Z"
+    "cachedAt": "2026-05-09T00:00:00Z",
+    "noTollExtraMinutes": 10,
+    "noTollExtraKm": 2.7
+  },
+  {
+    "id": "kuchai-lama-klcc",
+    "origin": "Kuchai Lama",
+    "destination": "KLCC",
+    "distanceKm": 12,
+    "driveTimeMinutes": 20,
+    "driveTimePeakMinutes": 48,
+    "transitTimeMinutes": 38,
+    "fareRM": 2.4,
+    "routeDescription": "LRT Sri Petaling Line → Masjid Jamek → LRT Kelana Jaya Line (1 transfer)",
+    "lines": [
+      {
+        "name": "LRT Sri Petaling Line",
+        "colour": "#8B1A1A",
+        "fromStation": "Kuchai",
+        "toStation": "Masjid Jamek"
+      },
+      {
+        "name": "LRT Kelana Jaya Line",
+        "colour": "#0057A8",
+        "fromStation": "Masjid Jamek",
+        "toStation": "KLCC"
+      }
+    ],
+    "tollHighways": [
+      "npe"
+    ],
+    "recommendedParking": null,
+    "cachedAt": "2026-05-10T00:00:00Z",
+    "noTollExtraMinutes": 7,
+    "noTollExtraKm": 1.8
+  },
+  {
+    "id": "kuchai-lama-bangsar",
+    "origin": "Kuchai Lama",
+    "destination": "Bangsar",
+    "distanceKm": 8,
+    "driveTimeMinutes": 15,
+    "driveTimePeakMinutes": 35,
+    "transitTimeMinutes": 28,
+    "fareRM": 1.8,
+    "routeDescription": "LRT Sri Petaling Line → Bangsar (no transfer)",
+    "lines": [
+      {
+        "name": "LRT Sri Petaling Line",
+        "colour": "#8B1A1A",
+        "fromStation": "Kuchai",
+        "toStation": "Bangsar"
+      }
+    ],
+    "tollHighways": [
+      "npe"
+    ],
+    "recommendedParking": null,
+    "cachedAt": "2026-05-10T00:00:00Z",
+    "noTollExtraMinutes": 5,
+    "noTollExtraKm": 1.2
+  },
+  {
+    "id": "kepong-midvalley",
+    "origin": "Kepong",
+    "destination": "Midvalley",
+    "distanceKm": 12,
+    "driveTimeMinutes": 22,
+    "driveTimePeakMinutes": 50,
+    "transitTimeMinutes": 40,
+    "fareRM": 2.2,
+    "routeDescription": "LRT Sri Petaling Line → KL Sentral → KTM Komuter (1 transfer)",
+    "lines": [
+      {
+        "name": "LRT Sri Petaling Line",
+        "colour": "#8B1A1A",
+        "fromStation": "Kepong Sentral",
+        "toStation": "KL Sentral"
+      },
+      {
+        "name": "KTM Komuter",
+        "colour": "#003087",
+        "fromStation": "KL Sentral",
+        "toStation": "Midvalley"
+      }
+    ],
+    "tollHighways": [
+      "sprint"
+    ],
+    "recommendedParking": null,
+    "cachedAt": "2026-05-10T00:00:00Z",
+    "noTollExtraMinutes": 8,
+    "noTollExtraKm": 1.8
+  },
+  {
+    "id": "kepong-bukit-bintang",
+    "origin": "Kepong",
+    "destination": "Bukit Bintang",
+    "distanceKm": 13,
+    "driveTimeMinutes": 25,
+    "driveTimePeakMinutes": 55,
+    "transitTimeMinutes": 45,
+    "fareRM": 2.5,
+    "routeDescription": "LRT Sri Petaling Line → Hang Tuah → Monorail (1 transfer)",
+    "lines": [
+      {
+        "name": "LRT Sri Petaling Line",
+        "colour": "#8B1A1A",
+        "fromStation": "Kepong Sentral",
+        "toStation": "Hang Tuah"
+      },
+      {
+        "name": "KL Monorail",
+        "colour": "#E4002B",
+        "fromStation": "Hang Tuah",
+        "toStation": "Bukit Bintang"
+      }
+    ],
+    "tollHighways": [
+      "sprint"
+    ],
+    "recommendedParking": null,
+    "cachedAt": "2026-05-10T00:00:00Z",
+    "noTollExtraMinutes": 9,
+    "noTollExtraKm": 2
+  },
+  {
+    "id": "kepong-pj",
+    "origin": "Kepong",
+    "destination": "Petaling Jaya",
+    "distanceKm": 16,
+    "driveTimeMinutes": 28,
+    "driveTimePeakMinutes": 60,
+    "transitTimeMinutes": 50,
+    "fareRM": 2.8,
+    "routeDescription": "LRT Sri Petaling Line → Asia Jaya (1 transfer via KL Sentral)",
+    "lines": [
+      {
+        "name": "LRT Sri Petaling Line",
+        "colour": "#8B1A1A",
+        "fromStation": "Kepong Sentral",
+        "toStation": "KL Sentral"
+      },
+      {
+        "name": "LRT Kelana Jaya Line",
+        "colour": "#0057A8",
+        "fromStation": "KL Sentral",
+        "toStation": "Asia Jaya"
+      }
+    ],
+    "tollHighways": [
+      "sprint"
+    ],
+    "recommendedParking": null,
+    "cachedAt": "2026-05-10T00:00:00Z",
+    "noTollExtraMinutes": 10,
+    "noTollExtraKm": 2.4
+  },
+  {
+    "id": "puchong-midvalley",
+    "origin": "Puchong",
+    "destination": "Midvalley",
+    "distanceKm": 16,
+    "driveTimeMinutes": 28,
+    "driveTimePeakMinutes": 60,
+    "transitTimeMinutes": 48,
+    "fareRM": 2.6,
+    "routeDescription": "LRT Sri Petaling Line → KL Sentral → KTM Komuter (1 transfer)",
+    "lines": [
+      {
+        "name": "LRT Sri Petaling Line",
+        "colour": "#8B1A1A",
+        "fromStation": "IOI Puchong Jaya",
+        "toStation": "KL Sentral"
+      },
+      {
+        "name": "KTM Komuter",
+        "colour": "#003087",
+        "fromStation": "KL Sentral",
+        "toStation": "Midvalley"
+      }
+    ],
+    "tollHighways": [
+      "ldp",
+      "npe"
+    ],
+    "recommendedParking": "ioi-puchong-lrt",
+    "cachedAt": "2026-05-10T00:00:00Z",
+    "noTollExtraMinutes": 10,
+    "noTollExtraKm": 2.4
+  },
+  {
+    "id": "puchong-bukit-bintang",
+    "origin": "Puchong",
+    "destination": "Bukit Bintang",
+    "distanceKm": 20,
+    "driveTimeMinutes": 35,
+    "driveTimePeakMinutes": 70,
+    "transitTimeMinutes": 55,
+    "fareRM": 3,
+    "routeDescription": "LRT Sri Petaling Line → Hang Tuah → Monorail (1 transfer)",
+    "lines": [
+      {
+        "name": "LRT Sri Petaling Line",
+        "colour": "#8B1A1A",
+        "fromStation": "IOI Puchong Jaya",
+        "toStation": "Hang Tuah"
+      },
+      {
+        "name": "KL Monorail",
+        "colour": "#E4002B",
+        "fromStation": "Hang Tuah",
+        "toStation": "Bukit Bintang"
+      }
+    ],
+    "tollHighways": [
+      "ldp",
+      "npe"
+    ],
+    "recommendedParking": "ioi-puchong-lrt",
+    "cachedAt": "2026-05-10T00:00:00Z",
+    "noTollExtraMinutes": 12,
+    "noTollExtraKm": 3
+  },
+  {
+    "id": "puchong-pj",
+    "origin": "Puchong",
+    "destination": "Petaling Jaya",
+    "distanceKm": 14,
+    "driveTimeMinutes": 25,
+    "driveTimePeakMinutes": 55,
+    "transitTimeMinutes": 45,
+    "fareRM": 2.4,
+    "routeDescription": "LRT Sri Petaling Line → Asia Jaya (1 transfer)",
+    "lines": [
+      {
+        "name": "LRT Sri Petaling Line",
+        "colour": "#8B1A1A",
+        "fromStation": "IOI Puchong Jaya",
+        "toStation": "KL Sentral"
+      },
+      {
+        "name": "LRT Kelana Jaya Line",
+        "colour": "#0057A8",
+        "fromStation": "KL Sentral",
+        "toStation": "Asia Jaya"
+      }
+    ],
+    "tollHighways": [
+      "ldp"
+    ],
+    "recommendedParking": "ioi-puchong-lrt",
+    "cachedAt": "2026-05-10T00:00:00Z",
+    "noTollExtraMinutes": 9,
+    "noTollExtraKm": 2.1
+  },
+  {
+    "id": "puchong-kl-sentral",
+    "origin": "Puchong",
+    "destination": "KL Sentral",
+    "distanceKm": 18,
+    "driveTimeMinutes": 30,
+    "driveTimePeakMinutes": 65,
+    "transitTimeMinutes": 42,
+    "fareRM": 2.8,
+    "routeDescription": "LRT Sri Petaling Line direct to KL Sentral",
+    "lines": [
+      {
+        "name": "LRT Sri Petaling Line",
+        "colour": "#8B1A1A",
+        "fromStation": "IOI Puchong Jaya",
+        "toStation": "KL Sentral"
+      }
+    ],
+    "tollHighways": [
+      "ldp",
+      "npe"
+    ],
+    "recommendedParking": "ioi-puchong-lrt",
+    "cachedAt": "2026-05-10T00:00:00Z",
+    "noTollExtraMinutes": 11,
+    "noTollExtraKm": 2.7
+  },
+  {
+    "id": "cheras-midvalley",
+    "origin": "Cheras",
+    "destination": "Midvalley",
+    "distanceKm": 10,
+    "driveTimeMinutes": 18,
+    "driveTimePeakMinutes": 42,
+    "transitTimeMinutes": 32,
+    "fareRM": 1.8,
+    "routeDescription": "MRT Kajang Line → KL Sentral → KTM Komuter (1 transfer)",
+    "lines": [
+      {
+        "name": "MRT Kajang Line",
+        "colour": "#1D9E75",
+        "fromStation": "Taman Midah",
+        "toStation": "KL Sentral"
+      },
+      {
+        "name": "KTM Komuter",
+        "colour": "#003087",
+        "fromStation": "KL Sentral",
+        "toStation": "Midvalley"
+      }
+    ],
+    "tollHighways": [
+      "smart"
+    ],
+    "recommendedParking": "taman-midah-mrt",
+    "cachedAt": "2026-05-10T00:00:00Z",
+    "noTollExtraMinutes": 6,
+    "noTollExtraKm": 1.5
+  },
+  {
+    "id": "cheras-bukit-bintang",
+    "origin": "Cheras",
+    "destination": "Bukit Bintang",
+    "distanceKm": 11,
+    "driveTimeMinutes": 20,
+    "driveTimePeakMinutes": 48,
+    "transitTimeMinutes": 38,
+    "fareRM": 2,
+    "routeDescription": "MRT Kajang Line → Hang Tuah → Monorail (1 transfer)",
+    "lines": [
+      {
+        "name": "MRT Kajang Line",
+        "colour": "#1D9E75",
+        "fromStation": "Taman Midah",
+        "toStation": "Hang Tuah"
+      },
+      {
+        "name": "KL Monorail",
+        "colour": "#E4002B",
+        "fromStation": "Hang Tuah",
+        "toStation": "Bukit Bintang"
+      }
+    ],
+    "tollHighways": [
+      "smart"
+    ],
+    "recommendedParking": "taman-midah-mrt",
+    "cachedAt": "2026-05-10T00:00:00Z",
+    "noTollExtraMinutes": 7,
+    "noTollExtraKm": 1.7
+  },
+  {
+    "id": "shah-alam-pj",
+    "origin": "Shah Alam",
+    "destination": "Petaling Jaya",
+    "distanceKm": 15,
+    "driveTimeMinutes": 25,
+    "driveTimePeakMinutes": 55,
+    "transitTimeMinutes": 45,
+    "fareRM": 2.2,
+    "routeDescription": "KTM Komuter → Subang Jaya → LRT Kelana Jaya Line (1 transfer)",
+    "lines": [
+      {
+        "name": "KTM Komuter",
+        "colour": "#003087",
+        "fromStation": "Shah Alam",
+        "toStation": "Subang Jaya"
+      },
+      {
+        "name": "LRT Kelana Jaya Line",
+        "colour": "#0057A8",
+        "fromStation": "Subang Jaya",
+        "toStation": "Asia Jaya"
+      }
+    ],
+    "tollHighways": [
+      "kesas"
+    ],
+    "recommendedParking": null,
+    "cachedAt": "2026-05-10T00:00:00Z",
+    "noTollExtraMinutes": 9,
+    "noTollExtraKm": 2.3
+  },
+  {
+    "id": "shah-alam-kl-sentral",
+    "origin": "Shah Alam",
+    "destination": "KL Sentral",
+    "distanceKm": 25,
+    "driveTimeMinutes": 35,
+    "driveTimePeakMinutes": 70,
+    "transitTimeMinutes": 55,
+    "fareRM": 3.2,
+    "routeDescription": "KTM Komuter direct to KL Sentral",
+    "lines": [
+      {
+        "name": "KTM Komuter",
+        "colour": "#003087",
+        "fromStation": "Shah Alam",
+        "toStation": "KL Sentral"
+      }
+    ],
+    "tollHighways": [
+      "kesas",
+      "npe"
+    ],
+    "recommendedParking": null,
+    "cachedAt": "2026-05-10T00:00:00Z",
+    "noTollExtraMinutes": 12,
+    "noTollExtraKm": 3.8
+  },
+  {
+    "id": "subang-jaya-midvalley",
+    "origin": "Subang Jaya",
+    "destination": "Midvalley",
+    "distanceKm": 20,
+    "driveTimeMinutes": 30,
+    "driveTimePeakMinutes": 60,
+    "transitTimeMinutes": 48,
+    "fareRM": 2.8,
+    "routeDescription": "KTM Komuter → KL Sentral → KTM Komuter (1 transfer)",
+    "lines": [
+      {
+        "name": "KTM Komuter",
+        "colour": "#003087",
+        "fromStation": "Subang Jaya",
+        "toStation": "KL Sentral"
+      },
+      {
+        "name": "KTM Komuter",
+        "colour": "#003087",
+        "fromStation": "KL Sentral",
+        "toStation": "Midvalley"
+      }
+    ],
+    "tollHighways": [
+      "npe",
+      "sprint"
+    ],
+    "recommendedParking": null,
+    "cachedAt": "2026-05-10T00:00:00Z",
+    "noTollExtraMinutes": 11,
+    "noTollExtraKm": 3
+  },
+  {
+    "id": "subang-jaya-pj",
+    "origin": "Subang Jaya",
+    "destination": "Petaling Jaya",
+    "distanceKm": 10,
+    "driveTimeMinutes": 18,
+    "driveTimePeakMinutes": 40,
+    "transitTimeMinutes": 30,
+    "fareRM": 1.8,
+    "routeDescription": "LRT Kelana Jaya Line direct to Asia Jaya",
+    "lines": [
+      {
+        "name": "LRT Kelana Jaya Line",
+        "colour": "#0057A8",
+        "fromStation": "Subang Jaya",
+        "toStation": "Asia Jaya"
+      }
+    ],
+    "tollHighways": [],
+    "recommendedParking": null,
+    "cachedAt": "2026-05-10T00:00:00Z",
+    "noTollExtraMinutes": 6,
+    "noTollExtraKm": 1.5
+  },
+  {
+    "id": "subang-jaya-bangsar",
+    "origin": "Subang Jaya",
+    "destination": "Bangsar",
+    "distanceKm": 22,
+    "driveTimeMinutes": 32,
+    "driveTimePeakMinutes": 65,
+    "transitTimeMinutes": 50,
+    "fareRM": 3,
+    "routeDescription": "KTM Komuter → KL Sentral → LRT Sri Petaling Line (1 transfer)",
+    "lines": [
+      {
+        "name": "KTM Komuter",
+        "colour": "#003087",
+        "fromStation": "Subang Jaya",
+        "toStation": "KL Sentral"
+      },
+      {
+        "name": "LRT Sri Petaling Line",
+        "colour": "#8B1A1A",
+        "fromStation": "KL Sentral",
+        "toStation": "Bangsar"
+      }
+    ],
+    "tollHighways": [
+      "npe"
+    ],
+    "recommendedParking": null,
+    "cachedAt": "2026-05-10T00:00:00Z",
+    "noTollExtraMinutes": 11,
+    "noTollExtraKm": 3.3
+  },
+  {
+    "id": "kuchai-lama-midvalley",
+    "origin": "Kuchai Lama",
+    "destination": "Midvalley",
+    "distanceKm": 7,
+    "driveTimeMinutes": 15,
+    "driveTimePeakMinutes": 35,
+    "transitTimeMinutes": 28,
+    "fareRM": 1.6,
+    "routeDescription": "LRT Sri Petaling Line → KL Sentral → KTM Komuter (1 transfer)",
+    "lines": [
+      {
+        "name": "LRT Sri Petaling Line",
+        "colour": "#8B1A1A",
+        "fromStation": "Kuchai",
+        "toStation": "KL Sentral"
+      },
+      {
+        "name": "KTM Komuter",
+        "colour": "#003087",
+        "fromStation": "KL Sentral",
+        "toStation": "Midvalley"
+      }
+    ],
+    "tollHighways": [
+      "npe"
+    ],
+    "recommendedParking": null,
+    "cachedAt": "2026-05-10T00:00:00Z",
+    "noTollExtraMinutes": 5,
+    "noTollExtraKm": 1.1
+  },
+  {
+    "id": "kuchai-lama-bukit-bintang",
+    "origin": "Kuchai Lama",
+    "destination": "Bukit Bintang",
+    "distanceKm": 9,
+    "driveTimeMinutes": 18,
+    "driveTimePeakMinutes": 40,
+    "transitTimeMinutes": 32,
+    "fareRM": 1.8,
+    "routeDescription": "LRT Sri Petaling Line → Hang Tuah → Monorail (1 transfer)",
+    "lines": [
+      {
+        "name": "LRT Sri Petaling Line",
+        "colour": "#8B1A1A",
+        "fromStation": "Kuchai",
+        "toStation": "Hang Tuah"
+      },
+      {
+        "name": "KL Monorail",
+        "colour": "#E4002B",
+        "fromStation": "Hang Tuah",
+        "toStation": "Bukit Bintang"
+      }
+    ],
+    "tollHighways": [
+      "npe"
+    ],
+    "recommendedParking": null,
+    "cachedAt": "2026-05-10T00:00:00Z",
+    "noTollExtraMinutes": 6,
+    "noTollExtraKm": 1.3
+  },
+  {
+    "id": "kuchai-lama-pj",
+    "origin": "Kuchai Lama",
+    "destination": "Petaling Jaya",
+    "distanceKm": 12,
+    "driveTimeMinutes": 20,
+    "driveTimePeakMinutes": 45,
+    "transitTimeMinutes": 38,
+    "fareRM": 2.2,
+    "routeDescription": "LRT Sri Petaling Line → KL Sentral → LRT Kelana Jaya Line (1 transfer)",
+    "lines": [
+      {
+        "name": "LRT Sri Petaling Line",
+        "colour": "#8B1A1A",
+        "fromStation": "Kuchai",
+        "toStation": "KL Sentral"
+      },
+      {
+        "name": "LRT Kelana Jaya Line",
+        "colour": "#0057A8",
+        "fromStation": "KL Sentral",
+        "toStation": "Asia Jaya"
+      }
+    ],
+    "tollHighways": [
+      "npe"
+    ],
+    "recommendedParking": null,
+    "cachedAt": "2026-05-10T00:00:00Z",
+    "noTollExtraMinutes": 7,
+    "noTollExtraKm": 1.8
+  },
+  {
+    "id": "kuchai-lama-kl-sentral",
+    "origin": "Kuchai Lama",
+    "destination": "KL Sentral",
+    "distanceKm": 10,
+    "driveTimeMinutes": 18,
+    "driveTimePeakMinutes": 40,
+    "transitTimeMinutes": 30,
+    "fareRM": 1.8,
+    "routeDescription": "LRT Sri Petaling Line direct to KL Sentral",
+    "lines": [
+      {
+        "name": "LRT Sri Petaling Line",
+        "colour": "#8B1A1A",
+        "fromStation": "Kuchai",
+        "toStation": "KL Sentral"
+      }
+    ],
+    "tollHighways": [
+      "npe"
+    ],
+    "recommendedParking": null,
+    "cachedAt": "2026-05-10T00:00:00Z",
+    "noTollExtraMinutes": 6,
+    "noTollExtraKm": 1.5
+  },
+  {
+    "id": "kajang-midvalley",
+    "origin": "Kajang",
+    "destination": "Midvalley",
+    "distanceKm": 24,
+    "driveTimeMinutes": 35,
+    "driveTimePeakMinutes": 70,
+    "transitTimeMinutes": 50,
+    "fareRM": 3.2,
+    "routeDescription": "MRT Kajang Line → KL Sentral → KTM Komuter (1 transfer)",
+    "lines": [
+      {
+        "name": "MRT Kajang Line",
+        "colour": "#1D9E75",
+        "fromStation": "Kajang",
+        "toStation": "KL Sentral"
+      },
+      {
+        "name": "KTM Komuter",
+        "colour": "#003087",
+        "fromStation": "KL Sentral",
+        "toStation": "Midvalley"
+      }
+    ],
+    "tollHighways": [
+      "mex"
+    ],
+    "recommendedParking": "kajang-mrt",
+    "cachedAt": "2026-05-10T00:00:00Z",
+    "noTollExtraMinutes": 12,
+    "noTollExtraKm": 3.6
+  },
+  {
+    "id": "kajang-bukit-bintang",
+    "origin": "Kajang",
+    "destination": "Bukit Bintang",
+    "distanceKm": 26,
+    "driveTimeMinutes": 38,
+    "driveTimePeakMinutes": 75,
+    "transitTimeMinutes": 55,
+    "fareRM": 3.8,
+    "routeDescription": "MRT Kajang Line → Hang Tuah → Monorail (1 transfer)",
+    "lines": [
+      {
+        "name": "MRT Kajang Line",
+        "colour": "#1D9E75",
+        "fromStation": "Kajang",
+        "toStation": "Hang Tuah"
+      },
+      {
+        "name": "KL Monorail",
+        "colour": "#E4002B",
+        "fromStation": "Hang Tuah",
+        "toStation": "Bukit Bintang"
+      }
+    ],
+    "tollHighways": [
+      "mex"
+    ],
+    "recommendedParking": "kajang-mrt",
+    "cachedAt": "2026-05-10T00:00:00Z",
+    "noTollExtraMinutes": 13,
+    "noTollExtraKm": 3.9
+  },
+  {
+    "id": "putrajaya-cyberjaya",
+    "origin": "Putrajaya",
+    "destination": "Cyberjaya",
+    "distanceKm": 8,
+    "driveTimeMinutes": 15,
+    "driveTimePeakMinutes": 25,
+    "transitTimeMinutes": 22,
+    "fareRM": 1.4,
+    "routeDescription": "MRT Putrajaya Line (short hop)",
+    "lines": [
+      {
+        "name": "MRT Putrajaya Line",
+        "colour": "#8B4513",
+        "fromStation": "Putrajaya Sentral",
+        "toStation": "Cyberjaya Utara"
+      }
+    ],
+    "tollHighways": [],
+    "recommendedParking": "putrajaya-sentral-mrt",
+    "cachedAt": "2026-05-10T00:00:00Z",
+    "noTollExtraMinutes": 5,
+    "noTollExtraKm": 1.2
+  },
+  {
+    "id": "putrajaya-bangsar",
+    "origin": "Putrajaya",
+    "destination": "Bangsar",
+    "distanceKm": 35,
+    "driveTimeMinutes": 42,
+    "driveTimePeakMinutes": 85,
+    "transitTimeMinutes": 68,
+    "fareRM": 4.8,
+    "routeDescription": "MRT Putrajaya Line → Muzium Negara → LRT Sri Petaling Line (1 transfer)",
+    "lines": [
+      {
+        "name": "MRT Putrajaya Line",
+        "colour": "#8B4513",
+        "fromStation": "Putrajaya Sentral",
+        "toStation": "Muzium Negara"
+      },
+      {
+        "name": "LRT Sri Petaling Line",
+        "colour": "#8B1A1A",
+        "fromStation": "Muzium Negara",
+        "toStation": "Bangsar"
+      }
+    ],
+    "tollHighways": [
+      "mex"
+    ],
+    "recommendedParking": "putrajaya-sentral-mrt",
+    "cachedAt": "2026-05-10T00:00:00Z",
+    "noTollExtraMinutes": 15,
+    "noTollExtraKm": 5.3
+  },
+  {
+    "id": "ampang-midvalley",
+    "origin": "Ampang",
+    "destination": "Midvalley",
+    "distanceKm": 14,
+    "driveTimeMinutes": 25,
+    "driveTimePeakMinutes": 55,
+    "transitTimeMinutes": 42,
+    "fareRM": 2.4,
+    "routeDescription": "LRT Ampang Line → Masjid Jamek → LRT Sri Petaling Line (2 transfers)",
+    "lines": [
+      {
+        "name": "LRT Ampang Line",
+        "colour": "#F7941D",
+        "fromStation": "Ampang",
+        "toStation": "Masjid Jamek"
+      },
+      {
+        "name": "LRT Sri Petaling Line",
+        "colour": "#8B1A1A",
+        "fromStation": "Masjid Jamek",
+        "toStation": "KL Sentral"
+      }
+    ],
+    "tollHighways": [
+      "akleh"
+    ],
+    "recommendedParking": null,
+    "cachedAt": "2026-05-10T00:00:00Z",
+    "noTollExtraMinutes": 9,
+    "noTollExtraKm": 2.1
+  },
+  {
+    "id": "ampang-bukit-bintang",
+    "origin": "Ampang",
+    "destination": "Bukit Bintang",
+    "distanceKm": 11,
+    "driveTimeMinutes": 22,
+    "driveTimePeakMinutes": 48,
+    "transitTimeMinutes": 38,
+    "fareRM": 2,
+    "routeDescription": "LRT Ampang Line → Hang Tuah → Monorail (1 transfer)",
+    "lines": [
+      {
+        "name": "LRT Ampang Line",
+        "colour": "#F7941D",
+        "fromStation": "Ampang",
+        "toStation": "Hang Tuah"
+      },
+      {
+        "name": "KL Monorail",
+        "colour": "#E4002B",
+        "fromStation": "Hang Tuah",
+        "toStation": "Bukit Bintang"
+      }
+    ],
+    "tollHighways": [
+      "akleh"
+    ],
+    "recommendedParking": null,
+    "cachedAt": "2026-05-10T00:00:00Z",
+    "noTollExtraMinutes": 8,
+    "noTollExtraKm": 1.7
+  },
+  {
+    "id": "gombak-midvalley",
+    "origin": "Gombak",
+    "destination": "Midvalley",
+    "distanceKm": 20,
+    "driveTimeMinutes": 30,
+    "driveTimePeakMinutes": 65,
+    "transitTimeMinutes": 52,
+    "fareRM": 3,
+    "routeDescription": "LRT Kelana Jaya Line → KL Sentral → KTM Komuter (1 transfer)",
+    "lines": [
+      {
+        "name": "LRT Kelana Jaya Line",
+        "colour": "#0057A8",
+        "fromStation": "Gombak",
+        "toStation": "KL Sentral"
+      },
+      {
+        "name": "KTM Komuter",
+        "colour": "#003087",
+        "fromStation": "KL Sentral",
+        "toStation": "Midvalley"
+      }
+    ],
+    "tollHighways": [
+      "duke"
+    ],
+    "recommendedParking": "gombak-lrt",
+    "cachedAt": "2026-05-10T00:00:00Z",
+    "noTollExtraMinutes": 11,
+    "noTollExtraKm": 3
+  },
+  {
+    "id": "gombak-bukit-bintang",
+    "origin": "Gombak",
+    "destination": "Bukit Bintang",
+    "distanceKm": 18,
+    "driveTimeMinutes": 28,
+    "driveTimePeakMinutes": 60,
+    "transitTimeMinutes": 48,
+    "fareRM": 2.8,
+    "routeDescription": "LRT Kelana Jaya Line → Hang Tuah → Monorail (1 transfer)",
+    "lines": [
+      {
+        "name": "LRT Kelana Jaya Line",
+        "colour": "#0057A8",
+        "fromStation": "Gombak",
+        "toStation": "Hang Tuah"
+      },
+      {
+        "name": "KL Monorail",
+        "colour": "#E4002B",
+        "fromStation": "Hang Tuah",
+        "toStation": "Bukit Bintang"
+      }
+    ],
+    "tollHighways": [
+      "duke"
+    ],
+    "recommendedParking": "gombak-lrt",
+    "cachedAt": "2026-05-10T00:00:00Z",
+    "noTollExtraMinutes": 10,
+    "noTollExtraKm": 2.7
   }
 ]
