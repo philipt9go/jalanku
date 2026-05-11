@@ -1160,5 +1160,321 @@
     "cachedAt": "2026-05-10T00:00:00Z",
     "noTollExtraMinutes": 10,
     "noTollExtraKm": 2.7
+  },
+  {
+    "id": "ampang-kl-sentral",
+    "origin": "Ampang",
+    "destination": "KL Sentral",
+    "distanceKm": 12,
+    "driveTimeMinutes": 22,
+    "driveTimePeakMinutes": 48,
+    "noTollExtraMinutes": 8,
+    "noTollExtraKm": 1.8,
+    "transitTimeMinutes": 35,
+    "fareRM": 2,
+    "routeDescription": "LRT Ampang Line → Masjid Jamek → LRT Sri Petaling Line to KL Sentral (1 transfer)",
+    "lines": [
+      {
+        "name": "LRT Ampang Line",
+        "colour": "#F7941D",
+        "fromStation": "Ampang",
+        "toStation": "Masjid Jamek"
+      },
+      {
+        "name": "LRT Sri Petaling Line",
+        "colour": "#8B1A1A",
+        "fromStation": "Masjid Jamek",
+        "toStation": "KL Sentral"
+      }
+    ],
+    "tollHighways": [
+      "akleh"
+    ],
+    "recommendedParking": null,
+    "cachedAt": "2026-05-11T00:00:00Z"
+  },
+  {
+    "id": "cheras-kl-sentral",
+    "origin": "Cheras",
+    "destination": "KL Sentral",
+    "distanceKm": 11,
+    "driveTimeMinutes": 20,
+    "driveTimePeakMinutes": 45,
+    "noTollExtraMinutes": 7,
+    "noTollExtraKm": 1.6,
+    "transitTimeMinutes": 30,
+    "fareRM": 1.8,
+    "routeDescription": "MRT Kajang Line direct to KL Sentral (no transfer)",
+    "lines": [
+      {
+        "name": "MRT Kajang Line",
+        "colour": "#1D9E75",
+        "fromStation": "Taman Midah",
+        "toStation": "KL Sentral"
+      }
+    ],
+    "tollHighways": [
+      "smart"
+    ],
+    "recommendedParking": "taman-midah-mrt",
+    "cachedAt": "2026-05-11T00:00:00Z"
+  },
+  {
+    "id": "gombak-kl-sentral",
+    "origin": "Gombak",
+    "destination": "KL Sentral",
+    "distanceKm": 18,
+    "driveTimeMinutes": 28,
+    "driveTimePeakMinutes": 60,
+    "noTollExtraMinutes": 10,
+    "noTollExtraKm": 2.7,
+    "transitTimeMinutes": 42,
+    "fareRM": 2.6,
+    "routeDescription": "LRT Kelana Jaya Line direct to KL Sentral (no transfer)",
+    "lines": [
+      {
+        "name": "LRT Kelana Jaya Line",
+        "colour": "#0057A8",
+        "fromStation": "Gombak",
+        "toStation": "KL Sentral"
+      }
+    ],
+    "tollHighways": [
+      "duke"
+    ],
+    "recommendedParking": "gombak-lrt",
+    "cachedAt": "2026-05-11T00:00:00Z"
+  },
+  {
+    "id": "kajang-kl-sentral",
+    "origin": "Kajang",
+    "destination": "KL Sentral",
+    "distanceKm": 26,
+    "driveTimeMinutes": 38,
+    "driveTimePeakMinutes": 75,
+    "noTollExtraMinutes": 13,
+    "noTollExtraKm": 3.9,
+    "transitTimeMinutes": 48,
+    "fareRM": 3.6,
+    "routeDescription": "MRT Kajang Line direct to KL Sentral (no transfer)",
+    "lines": [
+      {
+        "name": "MRT Kajang Line",
+        "colour": "#1D9E75",
+        "fromStation": "Kajang",
+        "toStation": "KL Sentral"
+      }
+    ],
+    "tollHighways": [
+      "mex"
+    ],
+    "recommendedParking": "kajang-mrt",
+    "cachedAt": "2026-05-11T00:00:00Z"
+  },
+  {
+    "id": "kepong-kl-sentral",
+    "origin": "Kepong",
+    "destination": "KL Sentral",
+    "distanceKm": 13,
+    "driveTimeMinutes": 22,
+    "driveTimePeakMinutes": 50,
+    "noTollExtraMinutes": 8,
+    "noTollExtraKm": 2,
+    "transitTimeMinutes": 38,
+    "fareRM": 2.2,
+    "routeDescription": "LRT Sri Petaling Line direct to KL Sentral (no transfer)",
+    "lines": [
+      {
+        "name": "LRT Sri Petaling Line",
+        "colour": "#8B1A1A",
+        "fromStation": "Kepong Sentral",
+        "toStation": "KL Sentral"
+      }
+    ],
+    "tollHighways": [
+      "sprint"
+    ],
+    "recommendedParking": null,
+    "cachedAt": "2026-05-11T00:00:00Z"
+  },
+  {
+    "id": "kepong-kuchai-lama",
+    "origin": "Kepong",
+    "destination": "Kuchai Lama",
+    "distanceKm": 15,
+    "driveTimeMinutes": 25,
+    "driveTimePeakMinutes": 55,
+    "noTollExtraMinutes": 9,
+    "noTollExtraKm": 2.2,
+    "transitTimeMinutes": 42,
+    "fareRM": 2.4,
+    "routeDescription": "LRT Sri Petaling Line direct (no transfer)",
+    "lines": [
+      {
+        "name": "LRT Sri Petaling Line",
+        "colour": "#8B1A1A",
+        "fromStation": "Kepong Sentral",
+        "toStation": "Kuchai"
+      }
+    ],
+    "tollHighways": [
+      "sprint"
+    ],
+    "recommendedParking": null,
+    "cachedAt": "2026-05-11T00:00:00Z"
+  },
+  {
+    "id": "puchong-kuchai-lama",
+    "origin": "Puchong",
+    "destination": "Kuchai Lama",
+    "distanceKm": 10,
+    "driveTimeMinutes": 18,
+    "driveTimePeakMinutes": 40,
+    "noTollExtraMinutes": 6,
+    "noTollExtraKm": 1.5,
+    "transitTimeMinutes": 25,
+    "fareRM": 1.6,
+    "routeDescription": "LRT Sri Petaling Line direct (no transfer)",
+    "lines": [
+      {
+        "name": "LRT Sri Petaling Line",
+        "colour": "#8B1A1A",
+        "fromStation": "IOI Puchong Jaya",
+        "toStation": "Kuchai"
+      }
+    ],
+    "tollHighways": [
+      "ldp"
+    ],
+    "recommendedParking": "ioi-puchong-lrt",
+    "cachedAt": "2026-05-11T00:00:00Z"
+  },
+  {
+    "id": "cheras-kuchai-lama",
+    "origin": "Cheras",
+    "destination": "Kuchai Lama",
+    "distanceKm": 8,
+    "driveTimeMinutes": 15,
+    "driveTimePeakMinutes": 35,
+    "noTollExtraMinutes": 5,
+    "noTollExtraKm": 1.2,
+    "transitTimeMinutes": 22,
+    "fareRM": 1.4,
+    "routeDescription": "MRT Kajang Line → KL Sentral → LRT Sri Petaling Line (1 transfer)",
+    "lines": [
+      {
+        "name": "MRT Kajang Line",
+        "colour": "#1D9E75",
+        "fromStation": "Taman Midah",
+        "toStation": "KL Sentral"
+      },
+      {
+        "name": "LRT Sri Petaling Line",
+        "colour": "#8B1A1A",
+        "fromStation": "KL Sentral",
+        "toStation": "Kuchai"
+      }
+    ],
+    "tollHighways": [
+      "smart"
+    ],
+    "recommendedParking": "taman-midah-mrt",
+    "cachedAt": "2026-05-11T00:00:00Z"
+  },
+  {
+    "id": "ampang-kuchai-lama",
+    "origin": "Ampang",
+    "destination": "Kuchai Lama",
+    "distanceKm": 14,
+    "driveTimeMinutes": 25,
+    "driveTimePeakMinutes": 52,
+    "noTollExtraMinutes": 9,
+    "noTollExtraKm": 2.1,
+    "transitTimeMinutes": 40,
+    "fareRM": 2.2,
+    "routeDescription": "LRT Ampang Line → Masjid Jamek → LRT Sri Petaling Line (2 transfers)",
+    "lines": [
+      {
+        "name": "LRT Ampang Line",
+        "colour": "#F7941D",
+        "fromStation": "Ampang",
+        "toStation": "Masjid Jamek"
+      },
+      {
+        "name": "LRT Sri Petaling Line",
+        "colour": "#8B1A1A",
+        "fromStation": "Masjid Jamek",
+        "toStation": "Kuchai"
+      }
+    ],
+    "tollHighways": [
+      "akleh"
+    ],
+    "recommendedParking": null,
+    "cachedAt": "2026-05-11T00:00:00Z"
+  },
+  {
+    "id": "subang-jaya-kuchai-lama",
+    "origin": "Subang Jaya",
+    "destination": "Kuchai Lama",
+    "distanceKm": 16,
+    "driveTimeMinutes": 28,
+    "driveTimePeakMinutes": 58,
+    "noTollExtraMinutes": 10,
+    "noTollExtraKm": 2.4,
+    "transitTimeMinutes": 42,
+    "fareRM": 2.4,
+    "routeDescription": "KTM Komuter → KL Sentral → LRT Sri Petaling Line (1 transfer)",
+    "lines": [
+      {
+        "name": "KTM Komuter",
+        "colour": "#003087",
+        "fromStation": "Subang Jaya",
+        "toStation": "KL Sentral"
+      },
+      {
+        "name": "LRT Sri Petaling Line",
+        "colour": "#8B1A1A",
+        "fromStation": "KL Sentral",
+        "toStation": "Kuchai"
+      }
+    ],
+    "tollHighways": [
+      "npe"
+    ],
+    "recommendedParking": null,
+    "cachedAt": "2026-05-11T00:00:00Z"
+  },
+  {
+    "id": "shah-alam-kuchai-lama",
+    "origin": "Shah Alam",
+    "destination": "Kuchai Lama",
+    "distanceKm": 22,
+    "driveTimeMinutes": 32,
+    "driveTimePeakMinutes": 65,
+    "noTollExtraMinutes": 11,
+    "noTollExtraKm": 3.3,
+    "transitTimeMinutes": 52,
+    "fareRM": 3,
+    "routeDescription": "KTM Komuter → KL Sentral → LRT Sri Petaling Line (1 transfer)",
+    "lines": [
+      {
+        "name": "KTM Komuter",
+        "colour": "#003087",
+        "fromStation": "Shah Alam",
+        "toStation": "KL Sentral"
+      },
+      {
+        "name": "LRT Sri Petaling Line",
+        "colour": "#8B1A1A",
+        "fromStation": "KL Sentral",
+        "toStation": "Kuchai"
+      }
+    ],
+    "tollHighways": [
+      "kesas"
+    ],
+    "recommendedParking": null,
+    "cachedAt": "2026-05-11T00:00:00Z"
   }
 ]

@@ -29,6 +29,12 @@ export default async function ResultPage({ params }: Props) {
           <h1 className="text-xl font-bold text-gray-900">
             Your monthly commute breakdown 📊
           </h1>
+          <div className="mt-2 flex items-start gap-1.5 bg-amber-50 border border-amber-100 rounded-lg px-3 py-2">
+            <span className="text-amber-500 text-sm flex-shrink-0">⚠️</span>
+            <p className="text-[11px] text-amber-700 leading-relaxed">
+              Transit times assume walking distance to nearest station. Actual convenience depends on your exact location within the area.
+            </p>
+          </div>
         </div>
 
         <ResultCalculator initial={result} />
