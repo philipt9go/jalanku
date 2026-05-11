@@ -42,52 +42,95 @@ export default function ResultCalculator({ initial }: Props) {
   const carCO2Monthly = Math.round(initial.route.distanceKm * 2 * 22 * 0.21) // ~0.21kg CO2/km
   const transitCO2Monthly = Math.round(initial.route.distanceKm * 2 * 22 * 0.04) // Rapid KL electric
 
-  // Winner
+  // Winner — smarter verdict logic
   const options = [
     { key: "toll", label: "Drive with toll", icon: "🚗", cost: car.totalMonthly },
     { key: "notoll", label: "Drive no toll", icon: "🛣️", cost: carNoToll.totalMonthly },
     { key: "transit", label: transitLabel, icon: transitIcon, cost: transitMonthly },
   ].sort((a, b) => a.cost - b.cost)
-  const winner = options[0]
+
+  const cheapest = options[0]
+  const secondCheapest = options[1]
+  const costDifference = secondCheapest.cost - cheapest.cost
+  const extraTime = initial.extraMinutesPerDay
+
+  // Determine verdict category
+  const isClosecall = costDifference < 20
+  const isDrivingBetter = cheapest.key !== "transit" && cheapest.key !== "mypass"
+  const isSlightAdvantage = costDifference >= 20 && costDifference < 50
+  const isClearWinner = costDifference >= 50 && costDifference < 150
+  const isBigWinner = costDifference >= 150
+
+  // Time penalty — if extra time is high and saving is low, driving is more practical
+  const timePenalty = extraTime > 20 && costDifference < 50
+
+  let verdictTitle = ""
+  let verdictSub = ""
+  let verdictColor = "bg-[#0F6E56]"
+
+  if (isClosecall || timePenalty) {
+    verdictTitle = "Close call — you decide"
+    verdictSub = timePenalty
+      ? `Only RM ${Math.round(costDifference)}/month difference with +${extraTime} min extra. Driving may be more practical.`
+      : `Only RM ${Math.round(costDifference)}/month difference. Either option works — pick what suits your lifestyle.`
+    verdictColor = "bg-gray-700"
+  } else if (isDrivingBetter) {
+    verdictTitle = "Driving wins for this route"
+    verdictSub = `Cheaper by RM ${Math.round(costDifference)}/month and faster. Transit not the best option here.`
+    verdictColor = "bg-orange-700"
+  } else if (isSlightAdvantage) {
+    verdictTitle = "Slight transit advantage"
+    verdictSub = `Save RM ${Math.round(costDifference)}/month — worth it if +${extraTime} min/day is acceptable to you.`
+    verdictColor = "bg-[#085041]"
+  } else if (isClearWinner) {
+    verdictTitle = `${cheapest.label} clearly wins`
+    verdictSub = `Save RM ${Math.round(costDifference)}/month for just +${extraTime} min/day. Strong case to switch.`
+    verdictColor = "bg-[#0F6E56]"
+  } else if (isBigWinner) {
+    verdictTitle = `${cheapest.label} wins by a lot`
+    verdictSub = `RM ${Math.round(costDifference)}/month saving is significant — that's RM ${Math.round(costDifference * 12).toLocaleString()}/year.`
+    verdictColor = "bg-[#0F6E56]"
+  }
+
+  const winner = cheapest
 
   return (
     <div className="space-y-4">
 
       {/* ── SECTION 1: VERDICT ─────────────────────── */}
-      <div className="bg-[#0F6E56] rounded-2xl p-5">
-        <p className="text-[#E1F5EE] text-xs font-bold uppercase tracking-wider mb-3">
-          🏆 Best option for your route
+      <div className={`${verdictColor} rounded-2xl p-5`}>
+        <p className="text-white/80 text-xs font-bold uppercase tracking-wider mb-3">
+          🏆 Our assessment
         </p>
         <div className="flex items-center gap-3 mb-4">
           <span className="text-4xl">{winner.icon}</span>
           <div>
-            <p className="text-white font-bold text-xl">{winner.label}</p>
-            <p className="text-[#E1F5EE] text-sm">RM {Math.round(winner.cost)}/month — cheapest option</p>
+            <p className="text-white font-bold text-xl">{verdictTitle}</p>
+            <p className="text-white/80 text-sm mt-0.5 leading-relaxed">{verdictSub}</p>
           </div>
         </div>
 
-        {monthlySaving > 0 ? (
-          <div className="grid grid-cols-3 gap-2 text-center">
-            <div className="bg-white/20 rounded-xl p-3">
-              <p className="text-[#E1F5EE] text-[10px] font-bold uppercase mb-1">Save/month</p>
-              <p className="text-white text-xl font-bold">RM {monthlySaving}</p>
-            </div>
-            <div className="bg-white/20 rounded-xl p-3">
-              <p className="text-[#E1F5EE] text-[10px] font-bold uppercase mb-1">Save/year</p>
-              <p className="text-white text-xl font-bold">RM {Math.round(annualSaving).toLocaleString()}</p>
-            </div>
-            <div className="bg-white/20 rounded-xl p-3">
-              <p className="text-[#E1F5EE] text-[10px] font-bold uppercase mb-1">Extra time</p>
-              <p className="text-white text-xl font-bold">+{initial.extraMinutesPerDay}min</p>
-              <p className="text-[#E1F5EE] text-[10px]">per day</p>
-            </div>
+        <div className="grid grid-cols-3 gap-2 text-center">
+          <div className="bg-white/20 rounded-xl p-3">
+            <p className="text-white/70 text-[10px] font-bold uppercase mb-1">Cheapest/month</p>
+            <p className="text-white text-lg font-bold">RM {Math.round(winner.cost)}</p>
+            <p className="text-white/60 text-[10px]">{winner.label}</p>
           </div>
-        ) : (
-          <div className="bg-white/20 rounded-xl p-3 text-center">
-            <p className="text-white font-semibold">Driving is cheaper for this route</p>
-            <p className="text-[#E1F5EE] text-xs mt-1">Transit costs RM {Math.abs(monthlySaving)} more/month</p>
+          <div className="bg-white/20 rounded-xl p-3">
+            <p className="text-white/70 text-[10px] font-bold uppercase mb-1">vs driving</p>
+            <p className="text-white text-lg font-bold">
+              {monthlySaving > 0 ? `RM ${monthlySaving}` : `+RM ${Math.abs(monthlySaving)}`}
+            </p>
+            <p className="text-white/60 text-[10px]">{monthlySaving > 0 ? "saved" : "extra cost"}</p>
           </div>
-        )}
+          <div className="bg-white/20 rounded-xl p-3">
+            <p className="text-white/70 text-[10px] font-bold uppercase mb-1">Time diff</p>
+            <p className="text-white text-lg font-bold">
+              {initial.extraMinutesPerDay > 0 ? `+${initial.extraMinutesPerDay}` : `${initial.extraMinutesPerDay}`}min
+            </p>
+            <p className="text-white/60 text-[10px]">per day</p>
+          </div>
+        </div>
       </div>
 
       {/* ── SECTION 2: DAILY IMPACT ────────────────── */}
