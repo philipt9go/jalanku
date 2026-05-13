@@ -76,35 +76,36 @@ export default function ResultCalculator({ initial, destination }: Props) {
   ].sort((a, b) => a.cost - b.cost)
 
   const winner = options[0]
-  const diff = options[1].cost - winner.cost
-  const timePenalty = initial.extraMinutesPerDay > 20 && diff < 50
+  // Always use monthlySaving (car with toll vs best option) as single source of truth
+  const savingVsDriving = monthlySaving  // car.totalMonthly - transitMonthly
+  const timePenalty = initial.extraMinutesPerDay > 20 && savingVsDriving < 50
   const isDrivingBetter = winner.key !== "transit"
 
   let verdictTitle = ""
   let verdictSub = ""
   let verdictBg = "bg-[#0F6E56]"
 
-  if (diff < 20 || timePenalty) {
+  if (savingVsDriving < 20 || timePenalty) {
     verdictTitle = "Close call — you decide"
     verdictSub = timePenalty
-      ? `Only RM ${Math.round(diff)}/month difference with +${initial.extraMinutesPerDay} min extra. Driving may be more practical.`
-      : `Only RM ${Math.round(diff)}/month difference. Pick what suits your lifestyle.`
+      ? `Only RM ${Math.round(savingVsDriving)}/month difference with +${initial.extraMinutesPerDay} min extra. Driving may be more practical.`
+      : `Only RM ${Math.round(savingVsDriving)}/month difference. Pick what suits your lifestyle.`
     verdictBg = "bg-gray-700"
   } else if (isDrivingBetter) {
     verdictTitle = "Driving wins for this route"
-    verdictSub = `Cheaper by RM ${Math.round(diff)}/month. Transit not the best option here.`
+    verdictSub = `Driving is cheaper by RM ${Math.round(Math.abs(savingVsDriving))}/month. Transit not the best option here.`
     verdictBg = "bg-orange-700"
-  } else if (diff < 50) {
+  } else if (savingVsDriving < 50) {
     verdictTitle = "Slight transit advantage"
-    verdictSub = `Save RM ${Math.round(diff)}/month — worth considering if +${initial.extraMinutesPerDay} min/day is acceptable.`
+    verdictSub = `Switch to transit and save RM ${Math.round(savingVsDriving)}/month — worth it if +${initial.extraMinutesPerDay} min/day is fine.`
     verdictBg = "bg-[#085041]"
-  } else if (diff < 150) {
+  } else if (savingVsDriving < 150) {
     verdictTitle = "Transit clearly wins"
-    verdictSub = `Save RM ${Math.round(diff)}/month for just +${initial.extraMinutesPerDay} min/day. Strong case to switch.`
+    verdictSub = `Switch and save RM ${Math.round(savingVsDriving)}/month for just +${initial.extraMinutesPerDay} min/day. Strong case to switch.`
     verdictBg = "bg-[#0F6E56]"
   } else {
     verdictTitle = "Transit wins by a lot"
-    verdictSub = `RM ${Math.round(diff)}/month saving is significant — that's RM ${Math.round(diff * 12).toLocaleString()}/year.`
+    verdictSub = `Switch and save RM ${Math.round(savingVsDriving)}/month — that's RM ${Math.round(savingVsDriving * 12).toLocaleString()}/year.`
     verdictBg = "bg-[#0F6E56]"
   }
 
