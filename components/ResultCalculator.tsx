@@ -2,26 +2,8 @@
 
 import { useState, useMemo } from "react"
 import type { ComparisonResult } from "@/lib/types"
-import { calculateCarCost, MYPASS50_PRICE } from "@/lib/car-cost"
+import { calculateCarCost, MYPASS50_PRICE, PARKING_DEFAULTS } from "@/lib/car-cost"
 
-// Smart parking defaults by destination
-const PARKING_DEFAULTS: Record<string, number> = {
-  "KLCC":          10.00,
-  "TRX":           10.00,
-  "PNB 118":        8.00,
-  "Bukit Bintang":  8.00,
-  "Ampang Park":    6.00,
-  "KL Sentral":     6.00,
-  "Midvalley":      5.00,
-  "Bangsar":        5.00,
-  "Petaling Jaya":  3.00,
-  "Subang":         3.00,
-  "Subang Jaya":    3.00,
-  "Sunway":         4.00,
-  "Bukit Jalil":    3.00,
-  "Cyberjaya":      2.00,
-  "Kuchai Lama":    2.00,
-}
 
 interface Props {
   initial: ComparisonResult

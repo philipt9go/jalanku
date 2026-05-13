@@ -14,6 +14,25 @@ export const DEFAULTS: CarInputs = {
 export const WORKING_DAYS = 22
 export const MYPASS50_PRICE = 50  // RM 50/month flat unlimited Rapid KL
 
+// Smart parking defaults by destination — used in both cache lookup and UI
+export const PARKING_DEFAULTS: Record<string, number> = {
+  "KLCC":           10.00,
+  "TRX":            10.00,
+  "PNB 118":         8.00,
+  "Bukit Bintang":   8.00,
+  "Ampang Park":     6.00,
+  "KL Sentral":      6.00,
+  "Midvalley":       5.00,
+  "Bangsar":         5.00,
+  "Petaling Jaya":   3.00,
+  "Subang":          3.00,
+  "Subang Jaya":     3.00,
+  "Sunway":          4.00,
+  "Bukit Jalil":     3.00,
+  "Cyberjaya":       2.00,
+  "Kuchai Lama":     2.00,
+}
+
 // ─────────────────────────────────────────────────────────────
 // Car cost calculation
 // ─────────────────────────────────────────────────────────────

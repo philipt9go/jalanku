@@ -1,6 +1,6 @@
 import type { CachedRoute, ComparisonResult, TransitCost, CommuteRoute, CarInputs } from "./types"
 import type { TollHighway, ParkAndRideStation } from "./types"
-import { buildComparison } from "./car-cost"
+import { buildComparison, PARKING_DEFAULTS } from "./car-cost"
 
 import transitCacheData from "../data/transit_cache.json"
 import tollRatesData from "../data/toll_rates.json"
@@ -56,13 +56,16 @@ export function lookupComparison(
     return sum + (hw?.sections[0]?.feeRM ?? 0)
   }, 0)
 
+  // Use smart parking default based on destination
+  const smartParking = PARKING_DEFAULTS[cached.destination] ?? 4.00
+
   return buildComparison(
     route,
     transit,
     routeTollPerTrip,
     cached.noTollExtraMinutes ?? 0,
     cached.noTollExtraKm ?? 0,
-    customCarInputs
+    { dailyParkingRM: smartParking, ...customCarInputs }
   )
 }
 
