@@ -1,33 +1,27 @@
 import Link from "next/link"
-import { auth } from "@clerk/nextjs/server"
-import { UserButton } from "@clerk/nextjs"
 import RouteSelector from "@/components/RouteSelector"
 import SampleCards from "@/components/SampleCards"
 import { getSampleResults } from "@/lib/cache"
 
 export default async function HomePage() {
-  const { userId } = await auth()
   const samples = getSampleResults(6)
 
   return (
     <div className="min-h-screen bg-stone-50">
+      {/* Nav — no login button */}
       <nav className="border-b border-stone-200 bg-white px-5 py-3 flex items-center justify-between">
         <span className="font-bold text-[#0F6E56] tracking-tight text-lg">JalanKu</span>
-        <div className="flex items-center gap-3">
-          {userId ? (
-            <>
-              <Link href="/dashboard" className="text-sm text-gray-500 hover:text-gray-800">Dashboard</Link>
-              <UserButton />
-            </>
-          ) : (
-            <Link href="/sign-in" className="text-sm text-gray-500 hover:text-gray-800">Log in</Link>
-          )}
-        </div>
+        <a
+          href="mailto:hello@jalanku.my"
+          className="text-sm text-gray-500 hover:text-[#0F6E56] transition-colors"
+        >
+          hello@jalanku.my
+        </a>
       </nav>
 
       <main className="max-w-xl mx-auto px-4 py-10">
 
-        {/* Hero — English + Manglish */}
+        {/* Hero */}
         <div className="mb-8">
           <p className="text-xs font-bold tracking-widest text-[#0F6E56] uppercase mb-3">
             Free · No sign-up · Malaysia
@@ -45,12 +39,12 @@ export default async function HomePage() {
           <RouteSelector />
         </div>
 
-        {/* Assumptions strip */}
+        {/* Assumptions */}
         <div className="bg-stone-100 rounded-xl px-4 py-3 mb-8 flex flex-wrap gap-x-4 gap-y-1">
           <span className="text-xs text-gray-500">📅 22 working days/month</span>
           <span className="text-xs text-gray-500">⛽ RON95 RM 2.05/L</span>
           <span className="text-xs text-gray-500">🚗 10L per 100km</span>
-          <span className="text-xs text-gray-500">🅿️ RM 4/day parking (adjustable)</span>
+          <span className="text-xs text-gray-500">🅿️ Smart parking defaults per area</span>
         </div>
 
         {/* Popular routes */}
@@ -72,21 +66,22 @@ export default async function HomePage() {
 
         {/* MyPass50 awareness */}
         <div className="mt-4 bg-amber-50 border border-amber-100 rounded-2xl p-4 text-center">
-          <p className="text-sm font-semibold text-amber-700 mb-1">
-            🎫 Have MyPass50?
-          </p>
+          <p className="text-sm font-semibold text-amber-700 mb-1">🎫 Have MyPass50?</p>
           <p className="text-xs text-amber-600">
-            Our calculator shows how much you save with RM 50/month unlimited transit vs driving. Toggle it on the result page!
+            Toggle it on the result page to see how much you save vs driving. Game changer for many routes!
           </p>
         </div>
 
         {/* Footer */}
         <div className="mt-10 pt-6 border-t border-stone-200 text-center space-y-1">
           <p className="text-xs text-gray-400">
-            Based on official Rapid KL fares · real toll rates · RON95 subsidised price
+            Based on official Rapid KL fares · real toll rates · RON95 RM 2.05
           </p>
           <p className="text-xs text-gray-400">
-            We do not store your personal data · hello@jalanku.my
+            We do not store your personal data ·{" "}
+            <a href="mailto:hello@jalanku.my" className="hover:text-[#0F6E56] transition-colors">
+              hello@jalanku.my
+            </a>
           </p>
         </div>
       </main>
