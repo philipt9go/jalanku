@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { ClerkProvider } from "@clerk/nextjs"
 import { DM_Sans, DM_Mono } from "next/font/google"
+import { GoogleAnalytics } from "@next/third-parties/google"
 import "./globals.css"
 
 const dmSans = DM_Sans({
@@ -41,6 +42,7 @@ export default function RootLayout({
         <body className="bg-stone-50 text-gray-900 antialiased min-h-screen">
           {children}
         </body>
+        <GoogleAnalytics gaId="G-T43DPTEPF7" />
       </html>
     </ClerkProvider>
   )
