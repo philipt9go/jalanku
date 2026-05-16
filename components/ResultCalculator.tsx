@@ -404,7 +404,7 @@ export default function ResultCalculator({ initial, destination }: Props) {
 
       {/* ── SHARE ───────────────────────────────────── */}
       <a
-        href={`https://api.whatsapp.com/send?text=I spend RM ${Math.round(car.totalMonthly)}/month just to commute (${initial.route.originLabel} → ${initial.route.destinationLabel}).%0A%0ABest option: ${winner.label} at RM ${Math.round(winner.cost)}/month${monthlySaving > 0 ? ` — saving RM ${monthlySaving}/month or RM ${Math.round(annualSaving).toLocaleString()}/year` : ''}.%0A%0ACheck yours: https://jalanku.my?utm_source=whatsapp%26utm_medium=share`}
+        href={`https://api.whatsapp.com/send?text=I spend RM ${Math.round(car.totalMonthly)}/month just to commute (${initial.route.originLabel} → ${initial.route.destinationLabel}).%0A%0ABest option: ${winner.label} at RM ${Math.round(winner.cost)}/month${monthlySaving > 0 ? ` — saving RM ${monthlySaving}/month or RM ${Math.round(annualSaving).toLocaleString()}/year` : ''}.%0A%0ACheck yours: https://jalanku.my/%3Futm_source%3Dwhatsapp%26utm_medium%3Dshare`}
         target="_blank"
         rel="noopener noreferrer"
         className="block w-full bg-[#0F6E56] hover:bg-[#085041] text-white rounded-2xl py-4 font-bold text-sm text-center transition-colors"
